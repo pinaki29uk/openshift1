@@ -4,7 +4,7 @@ ENV APP_HOME /usr/$USER_HOME/app
 ENV UID=1002
 RUN mkdir -p /usr/app
 WORKDIR /usr/app
-RUN groupadd xyzgroup
+RUN addgroup xyzgroup
 RUN adduser --disabled-password --home /usr/app --uid $UID --ingroup xyzgroup swuser
 VOLUME /tmp
 USER $UID
