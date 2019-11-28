@@ -54,19 +54,19 @@
         </plugin>
         
         <plugin>
-           <groupId>org.springframework.boot</groupId>
-           <artifactId>spring-boot-maven-plugin</artifactId>
+           <!-- Build an executable JAR -->
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-jar-plugin</artifactId>
            <version>3.1.0</version>
            <configuration>
-              <mainClass>mysimpleproj.App</mainClass>
-              </configuration>
-                <executions>
-                   <execution>
-                      <goals>
-                          <goal>repackage</goal>
-                      </goals>
-                   </execution>
-                </executions>
+             <archive>
+               <manifest>
+                 <addClasspath>true</addClasspath>
+                 <classpathPrefix>lib/</classpathPrefix>
+                 <mainClass>mysimpleproj.App</mainClass>
+               </manifest>
+             </archive>
+           </configuration>
         </plugin>
         
       </plugins>
