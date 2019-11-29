@@ -21,8 +21,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>3.2</maven.compiler.source>
+    <maven.compiler.target>3.2</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -56,21 +56,14 @@
           <artifactId>spring-boot-maven-plugin</artifactId>
           <executions>
              <execution>
-                <phase>package</phase>
                 <goals>
-                   <goal>single</goal>
+                   <goal>repackage</goal>
                 </goals>
                 <configuration>
-                   <archive>
-                   <manifest>
-                      <mainClass>
-                        org.baeldung.executable.ExecutableMavenJar
+                    <classifier>spring-boot</classifier>
+                    <mainClass>
+                       mysimpleproj.App
                     </mainClass>
-                   </manifest>
-                   </archive>
-                   <descriptorRefs>
-                      <descriptorRef>1.0-SNAPSHOT</descriptorRef>
-                   </descriptorRefs>
                 </configuration>
              </execution>
           </executions>
