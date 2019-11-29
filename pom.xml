@@ -55,17 +55,24 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
           <executions>
-            <execution>
-               <goals>
-                  <goal>repackage</goal>
-               </goals>
-               <configuration>
-                 <classifier>spring-boot</classifier>
-                 <mainClass>
-                    mysimpleproj.App
-                 </mainClass>
-               </configuration>
-            </execution>
+             <execution>
+                <phase>package</phase>
+                <goals>
+                   <goal>single</goal>
+                </goals>
+                <configuration>
+                   <archive>
+                   <manifest>
+                      <mainClass>
+                        org.baeldung.executable.ExecutableMavenJar
+                    </mainClass>
+                   </manifest>
+                   </archive>
+                   <descriptorRefs>
+                      <descriptorRef>1.0-SNAPSHOT</descriptorRef>
+                   </descriptorRefs>
+                </configuration>
+             </execution>
           </executions>
         </plugin>
         
