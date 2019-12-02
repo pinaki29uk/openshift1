@@ -19,30 +19,12 @@
       <dependency>
         <groupId>me.snowdrop</groupId>
         <artifactId>spring-boot-bom</artifactId>
-        <version>2.1.6.SP3-redhat-00001</version>
+        <version>2.1.6.SP3</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
-
-<!-- Specify the repositories containing RHOAR artifacts. -->
-  <repositories>
-    <repository>
-      <id>redhat-ga</id>
-      <name>Red Hat GA Repository</name>
-      <url>https://maven.repository.redhat.com/ga/</url>
-    </repository>
-  </repositories>
-
-  <!-- Specify the repositories containing the plugins used to execute the build of your application. -->
-  <pluginRepositories>
-    <pluginRepository>
-      <id>redhat-ga</id>
-      <name>Red Hat GA Repository</name>
-      <url>https://maven.repository.redhat.com/ga/</url>
-    </pluginRepository>
-  </pluginRepositories>
   
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
