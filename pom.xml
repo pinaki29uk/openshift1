@@ -25,7 +25,7 @@
     </dependencies>
   </dependencyManagement>
   
-  !-- Specify the repositories containing RHOAR artifacts. -->
+  <!-- Specify the repositories containing RHOAR artifacts. -->
   <repositories>
     <repository>
       <id>redhat-ga</id>
